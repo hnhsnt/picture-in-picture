@@ -4,7 +4,7 @@ const button = document.getElementById('button');
 // Prompt the user to select media stream, pass that to the video element, then play
 async function selectMediaStream() {
     try {
-        // screen capture api
+        // screen capture api found on developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API
         const mediaStream = await navigator.mediaDevices.getDisplayMedia(); // with navigator.mediaDevices.getDisplayMedia
         videoElement.srcObject = mediaStream;
         videoElement.onloadedmetadata = () => {
